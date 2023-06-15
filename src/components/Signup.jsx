@@ -7,7 +7,6 @@ import {
 import { validate } from "../validation/joi";
 import "./Signup.scss";
 import sha256 from "sha256";
-import api from "../api";
 
 const Signup = () => {
   const [userData, setUserData] = useState({});
@@ -19,7 +18,7 @@ const Signup = () => {
     if (errors === true) {
       //store the data in the backend
       //START API
-      const result = await api("SIGNUP", { ...userData, isFreelancer: 0 });
+      // const result = await api("SIGNUP", { ...userData, isFreelancer: 0 });
       //END API
 
       delete userData.repeat_password;

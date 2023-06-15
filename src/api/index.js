@@ -8,10 +8,8 @@ async function api(type, payload) {
       const { data } = await axios.post(`${apiURL}/signup`, payload);
       return data;
     }
-
     case "LOGOUT":
       const { token } = getData("token");
-
       {
         const { data } = await axios.delete(`${apiURL}/logout`, {
           headers: {
@@ -20,10 +18,12 @@ async function api(type, payload) {
         });
         return data;
       }
-
     case "ADDJOB": {
       const { data } = await axios.post(`${apiURL}/createJobListing`, payload);
       return data;
+    }
+    default: {
+      break;
     }
   }
 }

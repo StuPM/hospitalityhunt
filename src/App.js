@@ -32,23 +32,21 @@ export default function App() {
   const debugModeOn = false;
   const dispatch = useDispatch();
 
-  const getInitialData = async () => {
-    const { data } = await axios.get(`${apiURL}/getFreelancers`);
-    dispatch(setAllFreelancers(data));
-  };
-
   useEffect(() => {
+    const getInitialData = async () => {
+      const { data } = await axios.get(`${apiURL}/getFreelancers`);
+      dispatch(setAllFreelancers(data));
+    };
     getInitialData();
-  }, []);
-
-  const getJobListingsData = async () => {
-    const { data } = await axios.get(`${apiURL}/getJobListings`);
-    dispatch(setAllJobListings(data));
-  };
+  }, [dispatch]);
 
   useEffect(() => {
+    const getJobListingsData = async () => {
+      const { data } = await axios.get(`${apiURL}/getJobListings`);
+      dispatch(setAllJobListings(data));
+    };
     getJobListingsData();
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>

@@ -46,7 +46,7 @@ const Controls = () => {
       setFreelancersWithDistance(filtered);
     };
     postCode();
-  }, [userInput]);
+  }, [freelancers, userInput, userSelect]);
 
   if (!freelancers) {
     return <p>Loading...</p>;
