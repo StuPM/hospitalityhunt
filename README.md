@@ -4,7 +4,7 @@ Hospitality Hunt connects freelancers and businesses in the hospitality industry
 
 ## Live link
 
-[Hospitality Hunt](https://hospitalityhunt.uk/) / [Backend](https://github.com/russell-gh/hospitality-hunt-back-end)
+[Hospitality Hunt](https://hospitalityhunt-production.up.railway.app/) / [Backend](https://github.com/StuPM/hospitalityhunt-back-end)
 
 ## Features
 
@@ -18,9 +18,9 @@ They will then have access to a list of freelancers who match their criteria.
 
 ## Technology Stack
 
-- React
-  - Built using functional components.
-- Redux
+- [React](https://react.dev/)
+  - Using functional components to create the website.
+- [Redux](https://react-redux.js.org/)
   - To facilitate the storing of data on the user's local computer, through browser local storage and state.
 - Validation and security
   - User inputs validated through the [JOI](https://joi.dev/) data validator.
